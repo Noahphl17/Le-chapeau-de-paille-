@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant One Piece</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="Logo.JPG.webp" alt="Logo One Piece">
+      <h1>Le Chapeau de Paille</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="evenement.html">Événements</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+<section id="evenements" class="evenements">
+  <h2>Événements à Venir</h2>
+  <div class="evenements-grid">
+    <!-- Carte Événement 1 -->
+    <div class="evenement-card">
+      <div class="evenement-image">
+        <img src="Cosplay.JPG" alt="Soirée Cosplay">
+      </div>
+      <div class="evenement-content">
+        <h3>Soirée Cosplay</h3>
+        <p class="date">15 novembre 2025</p>
+        <p>Venez déguisé en votre personnage préféré de *One Piece* et gagnez des prix !</p>
+      </div>
+    </div>
+
+    <!-- Carte Événement 2 -->
+    <div class="evenement-card">
+      <div class="evenement-image">
+        <img src="Quiz.JPG" alt="Quizz One Piece">
+      </div>
+      <div class="evenement-content">
+        <h3>Quizz One Piece</h3>
+        <p class="date">30 novembre 2025</p>
+        <p>Testez vos connaissances sur l'univers de One Piece et remportez des goodies exclusifs.</p>
+      </div>
+    </div>
+
+    <!-- Carte Événement 3 -->
+    <div class="evenement-card">
+      <div class="evenement-image">
+        <img src="dégustation sake.JPG" alt="Dégustation de Sake">
+      </div>
+      <div class="evenement-content">
+        <h3>Dégustation de Sake</h3>
+        <p class="date">10 décembre 2025</p>
+        <p>Découvrez les meilleurs sakes japonais avec notre expert Zoro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animate');
+      }
+    });
+  });
+
+  document.querySelectorAll('.evenement-card').forEach((el) => {
+    observer.observe(el);
+  });
+</script>
